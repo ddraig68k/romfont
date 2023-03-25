@@ -10,10 +10,10 @@ do
 	./font2bmp $font $out
 	
 	outpng="./font-images/$fontfile.png"
-	magick convert $out $outpng
+	convert $out $outpng
 
 	outzoom="./font-images/zoomed/zoomed_$fontfile.png"
-	magick convert $out -scale 400% $outzoom
+	convert $out -scale 400% $outzoom
 
 	rm $out
 

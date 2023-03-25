@@ -2,8 +2,8 @@ all:
 	gcc -O2 -Wall tools/findbin.c -o findbin
 	gcc -O2 -Wall tools/bin2header.c -o bin2header
 	gcc -O2 -Wall tools/extractbin.c -o extractbin
-	gcc -lSDL -lSDL_gfx -O2 -Wall tools/viewfont.c -o viewfont
-	gcc -lSDL -lSDL_gfx -O2 -Wall tools/font2bmp.c -o font2bmp
+	gcc -O2 -Wall tools/viewfont.c -o viewfont -lSDL -lSDL_gfx
+	gcc -O2 -Wall tools/font2bmp.c -o font2bmp -lSDL -lSDL_gfx 
 	size bin2header viewfont extractbin font2bmp findbin
 run:
 	#./viewfont _et4000_8x8.bin
